@@ -1,0 +1,20 @@
+{
+  "name": "backendcursos",
+  "version": "1.0.0",
+  "description": "API para gestão de cursos online",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Caioricardoo25/backendcursos.git"
+  },
+  "author": "Caio Ricardo Gonçalves Ribeiro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Caioricardoo25/backendcursos/issues"
+  },
+  "homepage": "https://github.com/Caioricardoo25/backendcursos#readme"
+}
