@@ -1,3 +1,5 @@
+import CursosDB from "../DB/cursosDB.js";
+
 export default class Cursos{
     #id 
     #titulo
@@ -16,7 +18,7 @@ export default class Cursos{
         this.#imagem = imagem;
         this.#cargaHoraria = cargaHoraria;
     }
-    
+
     get id(){
         return this.#id;
     }
@@ -59,5 +61,25 @@ export default class Cursos{
     }
     set cargaHoraria(novo_cargaHoraria){
         this.#cargaHoraria = novo_cargaHoraria;
+    }
+
+    async gravar(){
+        const cursosDB = new CursosDB();
+        await cursosDB.gravar(this);
+    }
+
+    async editar(){
+        const cursosDB = new CursosDB();
+        await cursosDB.editar(this);
+    }
+
+    async excluir(){
+        const cursosDB = new CursosDB();
+        await cursosDB.excluir(this);
+    }
+
+    async consultar(termo){
+        const cursosDB = new CursosDB();
+        return await cursosDB.consultar(termo);
     }
 }
